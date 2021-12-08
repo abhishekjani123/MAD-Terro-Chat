@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.chatapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/terro_chat"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/terro_chat"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChatApp">
+        <activity
+            android:name=".activity.ChatActivity"
+            android:exported="true" />
+        <service android:name=".firebase.FirebaseService"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+
+        </service>
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.UsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:exported="true">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
