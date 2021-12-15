@@ -37,3 +37,7 @@ Chat Section:
 -A chat window will be open where user can chat.
 -If user click on send button without typing anything a toast message will be displayed.
 -A Notification will be displayed to the receiver when sender will send the message.
+
+
+![Terro-chat](https://user-images.githubusercontent.com/65763501/146199307-58df1494-440d-48e8-9fe6-5258356240c9.png)
+
